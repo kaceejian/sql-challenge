@@ -19,7 +19,7 @@ GRANT ALL ON SCHEMA public TO postgres;
 
 CREATE TABLE IF NOT EXISTS public.departments
 (
-    dept_no character varying(4) COLLATE pg_catalog."default" NOT NULL,
+    dept_no character varying(10) COLLATE pg_catalog."default" NOT NULL,
     name character varying(25) COLLATE pg_catalog."default" NOT NULL,
     CONSTRAINT department_pkey PRIMARY KEY (dept_no)
 )
@@ -35,7 +35,7 @@ ALTER TABLE public.departments
 
 CREATE TABLE IF NOT EXISTS public.titles
 (
-    title_id character varying(5) COLLATE pg_catalog."default" NOT NULL,
+    title_id character varying(10) COLLATE pg_catalog."default" NOT NULL,
     title character varying(25) COLLATE pg_catalog."default" NOT NULL,
     CONSTRAINT titles_pkey PRIMARY KEY (title_id)
 )
@@ -53,7 +53,7 @@ ALTER TABLE public.titles
 CREATE TABLE IF NOT EXISTS public.employees
 (
     emp_no integer NOT NULL,
-    emp_title character varying(5) COLLATE pg_catalog."default" NOT NULL,
+    emp_title character varying(10) COLLATE pg_catalog."default" NOT NULL,
     birth_date date NOT NULL,
     first_name character varying(25) COLLATE pg_catalog."default" NOT NULL,
     last_name character varying(25) COLLATE pg_catalog."default" NOT NULL,

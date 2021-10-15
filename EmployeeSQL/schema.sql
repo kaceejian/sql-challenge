@@ -98,7 +98,7 @@ ALTER TABLE public.salaries
 
 CREATE TABLE IF NOT EXISTS public.dept_manager
 (
-    dep_no character varying(4) COLLATE pg_catalog."default" NOT NULL,
+    dep_no character varying(10) COLLATE pg_catalog."default" NOT NULL,
     emp_no integer NOT NULL,
     CONSTRAINT ck_dept_manager__dep_emp PRIMARY KEY (dep_no, emp_no),
     CONSTRAINT fk_dept_no__departments_dept_no FOREIGN KEY (dep_no)
@@ -122,7 +122,7 @@ ALTER TABLE public.dept_manager
 
 CREATE TABLE IF NOT EXISTS public.dept_emp
 (
-    dep_no character varying(4) COLLATE pg_catalog."default" NOT NULL,
+    dep_no character varying(10) COLLATE pg_catalog."default" NOT NULL,
     emp_no integer NOT NULL,
     CONSTRAINT ck_dept_emp__dep_emp PRIMARY KEY (emp_no, dep_no),
     CONSTRAINT fk_dept_no__departments_dept_no FOREIGN KEY (dep_no)
